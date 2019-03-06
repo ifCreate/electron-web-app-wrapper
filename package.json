@@ -5,11 +5,13 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build_osx",
+    "build_osx": "electron-packager . IFwrapper --platform=darwin --arch=x64 --out ~/Desktop/ --overwrite; echo 'Built for OSX'"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^4.0.5"
+    "electron": "^4.0.5",
+    "electron-packager": "^13.1.1"
   }
 }
