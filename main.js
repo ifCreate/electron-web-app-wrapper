@@ -1,5 +1,5 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow, BrowserView} = require('electron')
+const {app, BrowserWindow} = require('electron')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -12,30 +12,15 @@ function createWindow () {
     width: 1200,
     height: 720,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      webviewTag: true,
     }
   })
 
+  mainWindow.webContents.session.clearCache((e) => {
+    console.log('Cache cleared.')
+  })
   mainWindow.loadFile('index.html')
-
-  // // Create the views
-  // beatboxView = new BrowserView({
-  //   webPreferences: {
-  //     nodeIntegration: false
-  //   }  
-  // })
-  // mainWindow.setBrowserView(beatboxView)
-  // beatboxView.setBounds({ x: 0, y: 0, width: 600, height: 800 })
-  // beatboxView.webContents.loadURL('http://localhost:8001')
-  
-  // genieView = new BrowserView({
-  //   webPreferences: {
-  //     nodeIntegration: false
-  //   }  
-  // })
-  // mainWindow.setBrowserView(genieView)
-  // genieView.setBounds({ x: 600, y: 0, width: 600, height: 800 })
-  // genieView.webContents.loadURL('http://localhost:8002')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
@@ -70,6 +55,3 @@ app.on('activate', function () {
     createWindow()
   }
 })
-
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and require them here.

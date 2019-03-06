@@ -2,18 +2,18 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>ifCreate Web Installation Wrapper</title>
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+    <div class="navigate navigate-left">
+      <div class="triangle-left"></div>
+    </div>
+    <webview id="wrapped-app"></webview>
+    <div class="navigate navigate-right">
+      <div class="triangle-right"></div>
+    </div>
 
-    <script>
-      // You can also require other files to run in this process
-      require('./renderer.js')
-    </script>
+    <script src="scripts/loadWebApp.js"></script>
   </body>
 </html>
