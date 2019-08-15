@@ -17,7 +17,7 @@ ifCreate Web App Wrapper
 
 
 
-#AI音乐模块维护说明
+# AI音乐维护说明
 
 > 所有项目的地址都在https://github.com/ifCreate下，下载后按步骤运行即可使用	
 
