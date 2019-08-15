@@ -19,7 +19,7 @@ ifCreate Web App Wrapper
 
 # AI音乐维护说明
 
-> 所有项目的地址都在https://github.com/ifCreate下，下载后按步骤运行即可使用	
+> 所有项目的地址都在https://github.com/ifCreate 下，下载后按步骤运行即可使用	
 
 ### 1. Neural Drum Machine(神经网络电子鼓)
 
@@ -31,13 +31,13 @@ ifCreate Web App Wrapper
 
 ##### 代码模块：
 
-在编辑器模块使用了ace插件，API地址：https://ace.c9.io/，编译器模块使用了将script标签加入页面dom元素并运行的方法来解决编译问题。界面中的代码模块的初始化代码在./demo/demo_init.js中。
+在编辑器模块使用了ace插件，API地址：https://ace.c9.io/ ，编译器模块使用了将script标签加入页面dom元素并运行的方法来解决编译问题。界面中的代码模块的初始化代码在./demo/demo_init.js中。
 
 ##### 界面模块：
 
 操作弹窗内的参数选项的说明文字目前没有确定，确定好了以后请将说明文字进行替换。说明文字会在鼠标悬浮在可调整参数上时显示。
 
-界面使用了materialize库（https://materializecss.com/，类似于bootstape的一个库），所有的图标来自于https://material.io/resources/icons/?style=baseline。需要修改任何样式可以在main.css中进行。
+界面使用了materialize库（https://materializecss.com/ ，类似于bootstape的一个库），所有的图标来自于https://material.io/resources/icons/?style=baseline 。需要修改任何样式可以在main.css中进行。
 
 ##### 小初高接口区分：
 
@@ -74,7 +74,7 @@ python app.py
 
 ##### 训练模块：
 
-在后端使用了预训练模型加载少量数据进行了10个epoch的训练，返回了模型的loss的下降和acc的上升。前端使用echart(https://echarts.baidu.com/)画折线图。
+在后端使用了预训练模型加载少量数据进行了10个epoch的训练，返回了模型的loss的下降和acc的上升。前端使用echart(https://echarts.baidu.com/ )画折线图。
 
 ### 3. AI Duet(钢琴大师)
 
